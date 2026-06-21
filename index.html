@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Recipe Book</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-brand">
+      <a href="#home"><img src="assets/logo.png" class="logo" alt="Logo"></a>
+      <h1>Your Recipe Book</h1>
+    </div>
+    <form class="search" id="searchForm">
+      <label for="search"><img src="assets/search-icon-2-614x460.png" class="search-icon" alt="Search"></label>
+      <input type="search" id="search" placeholder="Find recipe...">
+      <button type="submit">Search</button>
+    </form>
+  </header>
+
+<div class="container">
+    <nav>
+
+      <!-- mobile nav -->
+      <ul class="humb">
+        <li onclick="hidehumb()">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+              <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+            </svg>
+          </a>
+        </li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#fav">Favorites</a></li>
+        <li><a href="#Cat">Categories</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+
+   <!-- desktop nav -->
+      <ul class="nav1">
+        <li class="hideOnPhone"><a href="#home">Home</a></li>
+        <li class="hideOnPhone"><a href="#fav">Favorites</a></li>
+        <li class="hideOnPhone"><a href="#Cat">Categories</a></li>
+        <li class="hideOnPhone"><a href="#about">About Us</a></li>
+        <li class="hideOnPhone"><a href="#contact">Contact Us</a></li>
+        <li onclick="showhumb()">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+              <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+ 
+
+      <main>
+        <section class="hero" id="home-hero">
+          <div class="hero-text">
+            <span class="hero-tag">Homemade · Wholesome · Delicious</span>
+            <h2>Cook something <em>beautiful</em> today.</h2>
+            <p>Over 700 vegetarian, vegan, and whole food recipes — from cozy soups to indulgent desserts. Simple ingredients, extraordinary flavors.</p>
+            <a href="#home" class="hero-btn">Browse Recipes ↓</a>
+          </div>
+        </section>
+
+
+    <section id="home">
+
+      <div class="section-header">
+        <h2>Recent Recipes</h2>
+        <span class="section-tag">Fresh from the kitchen</span>
+      </div>
+
+      <!-- Filter chips -->
+      <div class="filter-bar">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="savory">Savory</button>
+        <button class="chip" data-filter="sweet">Sweet</button>
+        <button class="chip" data-filter="vegan">Vegan</button>
+      </div>
+      
+      <div class="recipe-grid" id="recipeGrid">
+
+
+        <article data-category="savory vegan" data-title="Homemade Pesto">
+          <div class="card-img-wrap">
+            <a href="blank.html" target="_self">
+              
+              <img src="assets/Screenshot 2026-02-09 at 7.33.29 PM.png">
+            
+            </a>
+            <span class="badge vegan-badge">Vegan</span>
+            <span class="time-badge">10 min</span>
+          </div>
+          <div class="card-body">
+            <h3>Homemade Pesto</h3>
+            <p class="card-desc">Fresh basil, garlic, pine nuts and olive oil blended into a vibrant, silky sauce.</p>
+            <div class="card-footer">
+              <button type="button" class="fav-btn">Save</button>
+              <a href="blank.html" class="view-btn">View Recipe →</a>
+            </div>
+          </div>
+        </article>
+
+        <article data-category="savory vegan" data-title="Perfect Baked Potato">
+          <div class="card-img-wrap">
+            <a href="blank.html" target="_self">
+              
+              <img src="assets/Screenshot 2026-02-09 at 7.34.12 PM.png"></a>
+              <span class="badge vegan-badge">Vegan</span>
+              <span class="time-badge">60 min</span>
+            </div>
+            <div class="card-body">
+              <h3>Perfect Baked Potato</h3>
+              <p class="card-desc">Crispy skin, fluffy inside — the foolproof method for the ultimate baked potato.</p>
+              <div class="card-footer">
+                <button type="button" class="fav-btn">Save</button>
+                <a href="blank.html" class="view-btn">View Recipe →</a>
+              </div>
+            </div>
+          </article>
+
+
+       <article data-category="savory vegan" data-title="Spicy Tempeh Crumble Bowl">
+            <div class="card-img-wrap">
+              <a href="blank.html" target="_self">
+                <img src="assets/Screenshot 2026-02-09 at 7.34.52 PM.png"></a>
+                <span class="badge vegan-badge">Vegan</span>
+                <span class="time-badge">30 min</span>
+              </div>
+              <div class="card-body">
+                <h3>Spicy Tempeh Crumble Bowl</h3>
+                <p class="card-desc">Bold, spiced tempeh over red rice with avocado, lettuce and sesame crunch.</p>
+                <div class="card-footer">
+                  <button type="button" class="fav-btn">Save</button>
+                  <a href="blank.html" class="view-btn">View Recipe →</a>
+                </div>
+              </div>
+            </article>
+
+
+
+    
+          <article data-category="sweet" data-title="Turkish Coffee Chocolate Brownies">
+            <div class="card-img-wrap">
+              <a href="blank.html" target="_self">
+                
+                <img src="assets/Screenshot 2026-02-09 at 8.13.38 PM.png"></a>
+                <span class="badge sweet-badge">Dessert</span>
+                <span class="time-badge">40 min</span>
+              </div>
+              <div class="card-body">
+                <h3>Turkish Coffee Chocolate Brownies</h3>
+                <p class="card-desc">Rich, fudgy brownies with a deep coffee kick and glossy chocolate top.</p>
+                <div class="card-footer">
+                  <button type="button" class="fav-btn">Save</button>
+                  <a href="blank.html" class="view-btn">View Recipe →</a>
+                </div>
+              </div>
+            </article>
+
+
+      
+          <article data-category="sweet" data-title="Lemon Cake">
+            <div class="card-img-wrap">
+              <a href="blank.html" target="_self"> <img src="assets/Screenshot 2026-02-09 at 8.13.44 PM.png"></a>
+              <span class="badge sweet-badge">Dessert</span>
+              <span class="time-badge">55 min</span>
+            </div>
+            <div class="card-body">
+              <h3>Lemon Cake</h3>
+              <p class="card-desc">Glazed lemon loaf with bright citrus zest — tender, moist, and impossible to resist.</p>
+              <div class="card-footer">
+                <button type="button" class="fav-btn">Save</button>
+                <a href="blank.html" class="view-btn">View Recipe →</a>
+              </div>
+            </div>
+          </article>
+
+          <article data-category="savory vegan" data-title="Simple Bruschetta">
+            <div class="card-img-wrap">
+              <a href="blank.html" target="_self">
+                
+                <img src="assets/Screenshot 2026-02-09 at 8.13.54 PM.png"></a>
+                <span class="badge vegan-badge">Vegan</span>
+                <span class="time-badge">15 min</span>
+              </div>
+              <div class="card-body">
+                <h3>Simple Bruschetta</h3>
+                <p class="card-desc">Toasted sourdough heaped with fresh tomatoes, basil and a drizzle of good olive oil.</p>
+                <div class="card-footer">
+                  <button type="button" class="fav-btn">Save</button>
+                  <a href="blank.html" class="view-btn">View Recipe →</a>
+                </div>
+              </div>
+            </article>
+
+            <article data-category="savory vegan" data-title="Golden Turmeric Soup">
+              <div class="card-img-wrap">
+                <a href="blank.html" target="_self">
+                  
+                  <img src="assets/image.png"></a>
+                <span class="badge vegan-badge">Vegan</span>
+                <span class="time-badge">35 min</span>
+               
+              </div>
+              <div class="card-body">
+                <h3>Golden Turmeric Soup</h3>
+                <p class="card-desc">A warming, anti-inflammatory broth with coconut milk, lentils, and fragrant spices.</p>
+                <div class="card-footer">
+                  <button type="button" class="fav-btn">Save</button>
+                  <a href="blank.html" class="view-btn">View Recipe →</a>
+                </div>
+              </div>
+            </article>
+  
+            <article data-category="savory" data-title="White Bean Pasta">
+              <div class="card-img-wrap">
+                <a href="blank.html" target="_self">
+                  
+                  <img src="assets/image copy.png"></a>
+
+                <span class="time-badge">25 min</span>
+                <div class="placeholder-label">Pasta</div>
+              </div>
+              <div class="card-body">
+                <h3>White Bean Pasta</h3>
+                <p class="card-desc">Creamy white bean sauce tossed with short pasta, garlic, sage, and parmesan.</p>
+                <div class="card-footer">
+                  <button type="button" class="fav-btn">Save</button>
+                  <a href="blank.html" class="view-btn">View Recipe →</a>
+                </div>
+              </div>
+            </article>
+  
+            <article data-category="sweet" data-title="Banana Oat Pancakes">
+              <div class="card-img-wrap">
+                <a href="blank.html" target="_self">
+                  
+                  <img src="assets/image copy 2.png"></a>
+
+                <span class="time-badge">20 min</span>
+                <div class="placeholder-label">Breakfast</div>
+              </div>
+              <div class="card-body">
+                <h3>Banana Oat Pancakes</h3>
+                <p class="card-desc">Fluffy, naturally sweet pancakes made with ripe bananas and rolled oats — gluten-free.</p>
+                <div class="card-footer">
+                  <button type="button" class="fav-btn">Save</button>
+                  <a href="blank.html" class="view-btn">View Recipe →</a>
+                </div>
+              </div>
+            </article>
+
+      </div>
+      <div class="more-wrap">
+        <a href="blank.html" target="_blank" class="more-link">See all recipes →</a>
+      </div>
+      </section>
+    <br>
+
+
+    <section id="fav">
+      <div class="section-header">
+        <h2>Favorite Recipes</h2>
+        <span class="section-tag">Your saved collection</span>
+      </div>
+      <div id="favContent" class="fav-empty">
+        <div class="empty-icon"></div>
+        <p>No favorites yet — hit <strong>Save</strong> on any recipe to add it here.</p>
+      </div>
+    </section>
+
+    <section id="Cat">
+      <div class="section-header">
+        <h2>Categories</h2>
+        <span class="section-tag">Browse by type</span>
+      </div>
+      <div class="cat-grid">
+        <a href="#" class="cat-card">
+          <span class="cat-icon">Breakfast</span>
+          <span>Breakfast Recipes</span>
+        </a>
+        <a href="#" class="cat-card">
+          <span class="cat-icon">Dessert</span>
+          <span>Dessert Recipes</span>
+        </a>
+        <a href="#" class="cat-card">
+          <span class="cat-icon">Vegan</span>
+          <span>Vegan Recipes</span>
+        </a>
+        <a href="#" class="cat-card">
+          <span class="cat-icon">Italian</span>
+          <span>Italian Recipes</span>
+        </a>
+        <a href="#" class="cat-card">
+          <span class="cat-icon">Soups</span>
+          <span>Soups & Stews</span>
+        </a>
+        <a href="#" class="cat-card">
+          <span class="cat-icon">Bowls</span>
+          <span>Salads & Bowls</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+
+      <section id="about">
+        <h2>About Us</h2>
+        <p>
+          Your Recipe Book is a simple, responsive website built with pure HTML, CSS, and JavaScript.
+          It's a passion project celebrating everyday home cooking — featuring vegetarian, vegan, and
+          whole-food recipes that anyone can make and love.
+        </p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Jane Smith">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="jane@example.com">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="Your message..."></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+
+    </div>
+    <p class="footer-copy">© 2026 Your Recipe Book. All rights reserved. Recipes inspired by <a href="https://pinchofyum.com/" target="_blank">Pinch of Yum</a>.</p>
+  </footer>
+
+</body>
+</html>
